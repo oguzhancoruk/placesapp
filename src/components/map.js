@@ -13,7 +13,7 @@ function Map() {
 
     // İlk sayfa sorgusu
     service.textSearch({
-      location: { lat: 40.0082, lng: 28.9784 },
+      location: { lat: 41.0082, lng: 28.9784 },
       radius: 5000,
       type: ["restaurant"],
     }, handleResults);
@@ -35,21 +35,23 @@ function Map() {
     <> <div id="map" style={{ height: "300px" }}>
 
     </div>
+
+    <div className='row col-sm-12 d-flex justify-content-center'>
       {places?.map((place) => {
 
-        return (<div >
-          <ul class="list-group row">
-            <li class="list-group-item">Cras justo odio</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Morbi leo risus</li>
-            <li class="list-group-item">Porta ac consectetur ac</li>
-            <li class="list-group-item">Vestibulum at eros</li>
+        return (<div className='col-sm-3 mt-2' >
+          <ul class="list-group ">
+          <li class="list-group-item"><img src={ place.icon}/></li>
+            <li class="list-group-item  ">{place.name}</li>
+            <li class="list-group-item  ">{place.formatted_address}</li>
+         
+           
+          
           </ul>
-          <h3>{place?.name}</h3>
-          <p>{place?.vicinity}</p>
+         
         </div>)
       })}
-
+</div>
     </>
 
   );
