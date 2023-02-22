@@ -2,12 +2,13 @@ import logo from './logo.svg';
 import './App.css';
 
 
-import AddressLocation from './components/map';
+
+import Map from './components/map';
 
 function App() {
   return (
     <div className="App">
-     <AddressLocation/>
+    <Map/>
     </div>
   );
 }
